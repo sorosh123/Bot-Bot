@@ -9,7 +9,15 @@ client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
+    
+    
+    
+    if (message.content === '!rip') {
+        // Create the attachment using Attachment
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
+        // Send the attachment in the message channel
+        message.channel.send(attachment);
+    }
 });
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
