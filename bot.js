@@ -7,16 +7,11 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'ping') {
-    	return message.reply('pong');
+    	message.reply('pong');
   	}
     
-    
-    
-    if (message.content === '!rip') {
-        // Create the attachment using Attachment
-        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
-        message.channel.send(attachment);
+    if (message.content.start.With ("!rip")) {
+       message.channel.send("Nice man");
     }
 });
 // THIS  MUST  BE  THIS  WAY
